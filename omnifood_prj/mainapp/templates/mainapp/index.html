@@ -1,16 +1,17 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8"/>
-	<link href="../../../static/css/index.css" rel="stylesheet"/>
-        <title>Omnifood main page</title>
-    </head>
-    <body>
-	<h1 class="index">Omnifood_project</h1>
-	<ul class="main_nav">
-	    <li><a href="/">Home</a></li>
-	    <li><a href="/products/">Products</a></li>
-	    <li><a href="/contacts/">Contacts</a></li>
-	</ul>
-    </body>
-</html>
+{% extends 'mainapp/base.html' %}
+
+{% block title  %}
+<title>omnifood</title>
+{% endblock %}
+
+{% block content %}
+{% block menu %} {{ block.super }} {% endblock %}
+{% block header%}<h1 class="index">Omnifood_project</h1>
+<h2 class="header_small">Django rules</h2>
+{% endblock %}
+<div class="content">
+	    <p>
+		Aliquet nibh praesent tristique magna sit amet purus gravida quis.
+	    </p>
+	</div>
+{% endblock %}

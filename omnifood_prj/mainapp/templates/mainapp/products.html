@@ -1,15 +1,21 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8"/>
-        <title>Products</title>
-    </head>
-    <body>
-	<h1>Omnifood products</h1>
-	<ul class="main_nav">
-	    <li><a href="/">Home</a></li>
-	    <li><a href="/products/">Products</a></li>
-	    <li><a href="/contacts/">Contacts</a></li>
-	</ul>
-    </body>
-</html>
+{% extends 'mainapp/base.html' %}
+
+{% block title %}
+<title>Subscription plans</title>
+{% endblock %}
+
+{% block content %}
+{% include 'mainapp/includes/inc-menu.html' %}
+<h1 class="index">Omnifood subscription plans</h1>
+<div class="time">Current date/time {% now "j l F Y H:i" %}</div>
+<div>We have following products:
+    {% for item in products %}
+    <h3>{{ item }}</h3>
+    {% endfor %}
+</div>
+<div class="test">
+    <p>
+	Sed lectus vestibulum mattis ullamcorper velit sed. Quis commodo odio aenean sed adipiscing diam donec adipiscing tristique risus nec. Ultrices in iaculis nunc sed augue lacus, viverra vitae congue eu, consequat ac felis donec et odio pellentesque diam volutpat?
+    </p>
+</div>
+{% endblock %}
